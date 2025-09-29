@@ -1,44 +1,35 @@
-/* Gaya khusus Halaman Cinemas */
-
-/* Atur background khusus untuk halaman ini */
 body {
     background: url('../images/cinemas-bg.png') no-repeat center center/cover;
     background-attachment: fixed; 
 }
 
-/* Penyesuaian Judul Halaman (Our Cinemas) */
 .page-title {
-    font-family: 'Times New Roman', Times, serif; /* Font Serif untuk gaya dekoratif */
-    color: var(--color-accent-text); /* Warna Kekuningan */
-    text-align: left; /* Rata kiri */
+    font-family: 'Times New Roman', Times, serif; 
+    color: var(--color-accent-text);
+    text-align: left; 
     font-size: 3.5em; 
     font-weight: 400; 
-    padding-top: 50px; /* Jarak dari header */
-    margin-bottom: 20px; /* Jarak dari kotak di bawahnya */
-    /* Menghapus margin-left karena sudah diposisikan oleh container .main-cinema-box */
+    padding-top: 50px;
+    margin-bottom: 20px; 
 }
 
-/* Kotak GRADIENT Utama yang menampung semua kartu */
 .main-cinema-box {
     padding-bottom: 30px;
     
-    /* Menerapkan GRADIENT sebagai background utama konten */
     background: linear-gradient(180deg, 
         #232A2C 0%, 
         #4C5B5F 25%, 
         #607379 50%, 
         #748B92 100%);
     
-    /* Sudut melengkung yang sangat besar untuk kotak utama */
     border-radius: 40px; 
     padding: 30px; 
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); 
     width: 900px; 
     max-width: 90%;
-    margin: 0 auto 80px auto; /* Pusatkan kotak di tengah halaman */
+    margin: 0 auto 80px auto;
 }
 
-/* Styling Kartu Bioskop */
 .cinema-list {
     display: flex;
     flex-direction: column;
@@ -48,14 +39,11 @@ body {
 .cinema-card {
     display: flex;
     align-items: center;
-    /* WARNA KARTU UTAMA */
     background-color: #748B92; 
     
-    /* SUDUT MELENGKUNG YANG AKURAT */
     border-radius: 20px; 
     
     padding: 20px;
-    /* Meniru BORDER/SHADOW ABU-ABU */
     box-shadow: 0 0 0 2px rgba(150, 150, 150, 0.5), 
                 0 4px 15px rgba(0, 0, 0, 0.3); 
     overflow: hidden;
@@ -92,7 +80,6 @@ body {
     opacity: 0.9;
 }
 
-/* Responsif Sederhana */
 @media (max-width: 950px) {
     .page-title {
         text-align: center; 
