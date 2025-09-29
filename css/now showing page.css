@@ -1,0 +1,72 @@
+/* Import styling dasar dari index.css (opsional, jika Anda ingin memuat semua style dari index) */
+
+/* Gaya khusus Halaman Now Showing */
+
+/* Atur background khusus untuk halaman ini */
+body {
+    background: url('../images/nowshowing-bg.png') no-repeat center center/cover;
+    background-attachment: fixed; 
+}
+
+/* Penyesuaian Judul Halaman */
+.page-title {
+    color: var(--color-accent-text); /* Menggunakan warna aksen kuning kecokelatan */
+    text-align: center;
+    font-size: 3.5em; /* Ukuran yang lebih besar sesuai gambar */
+    font-weight: 500;
+    padding-top: 100px; /* Jarak dari header */
+    margin-bottom: 50px;
+}
+
+/* Layout Grid Poster */
+.movie-grid {
+    display: grid;
+    /* Membuat grid 4 kolom dengan lebar yang sama */
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 30px; /* Jarak antar poster */
+    padding-bottom: 100px; /* Jarak dari footer */
+}
+
+.movie-card {
+    /* Agar poster menempati seluruh ruang */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.movie-card img {
+    /* Poster Film (Mengambil gambar dari HTML) */
+    width: 100%;
+    max-width: 200px; /* Batasi lebar poster */
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    margin-bottom: 10px;
+}
+
+.movie-title {
+    color: var(--color-text-light);
+    font-size: 0.95em;
+    line-height: 1.3;
+    /* Pastikan warna teks putih/terang */
+    color: #f0f0f0; 
+}
+
+
+/* Responsif Sederhana */
+@media (max-width: 1024px) {
+    .movie-grid {
+        /* Ubah menjadi 3 kolom untuk tablet */
+        grid-template-columns: repeat(3, 1fr); 
+    }
+}
+@media (max-width: 600px) {
+    .movie-grid {
+        /* Ubah menjadi 2 kolom untuk ponsel */
+        grid-template-columns: repeat(2, 1fr); 
+    }
+    .page-title {
+        font-size: 2.5em;
+    }
+}

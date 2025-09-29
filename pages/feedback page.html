@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sinépolis - Feedback</title>
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/feedback page.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <div class="container nav-bar">
+            <div class="logo">SINÉPOLIS</div>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="promo page.html">Promos</a></li>
+                    <li><a href="now showing page.html">Now Showing</a></li>
+                    <li><a href="cinema page.html">Cinemas</a></li>
+                    <li><a href="feedback page.html" class="active">Feedback</a></li>
+                </ul>
+            </nav>
+            <div class="search-box">
+                <input type="text" placeholder="Search for movies">
+                <i class="fas fa-search"></i>
+            </div>
+        </div>
+    </header>
+
+    <section id="feedback-content">
+        <div class="container">
+            <div class="feedback-box">
+                
+                <h2 class="page-title">Feedback</h2>
+                
+                <form action="#" method="POST" class="feedback-form" id="feedbackForm">
+                    
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="comments">Comments:</label>
+                    <textarea id="comments" name="comments" rows="6" required></textarea>
+
+                    <button type="submit" class="submit-btn">Submit Feedback</button>
+
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Sinépolis. Seluruh hak cipta dilindungi.</p>
+            <p>Made for educational purposes only.</p>
+        </div>
+    </footer>
+
+    <script src="../js/feedback.js"></script> 
+
+</body>
+</html>

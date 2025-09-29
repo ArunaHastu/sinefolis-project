@@ -1,0 +1,268 @@
+/* Import Font ABeeZee dari Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=ABeeZee:ital@0;1&display=swap');
+
+/* Skema Warna Final Sesuai Permintaan */
+:root {
+    --color-background-main: #143547; /* Biru Tua Kehijauan untuk background section */
+    --color-background-header: #1E1E1E; /* Biru Header (Gelap) */
+    --color-background-footer: #1E1E1E; /* Biru Footer (Gelap) */
+    --color-accent-text: #E6DAC1; /* Kuning Kecokelatan untuk Logo/Link/Judul */
+    --color-search-input: #967E61; /* Warna Input Search */
+    --color-search-button: #967E61; /* Warna Tombol Search */
+    --color-book-now-bg: #192226; /* Background Tombol Book Now */
+    --color-dim-text: #192226; /* Warna tulisan gelap */
+}
+
+/* Base Reset dan Font Baru */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'ABeeZee', Arial, sans-serif; /* Menerapkan Font ABeeZee */
+    background-color: var(--color-background-main);
+    color: var(--color-text-light);
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Penyesuaian Judul Section */
+h2 {
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 40px;
+    padding-top: 40px; 
+    /* PERBAIKAN WARNA: Menggunakan warna terang (kuning kecokelatan) */
+    color: var(--color-accent-text); 
+}
+
+/* Header (Navigation Bar) */
+header {
+    background-color: var(--color-background-header); 
+    position: sticky; 
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    padding: 15px 0;
+}
+
+.nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.6em;
+    font-weight: 600;
+    color: var(--color-accent-text);
+    background-color: var(--color-background-main); 
+    padding: 8px 15px;
+    /* PERBAIKAN SUDUT LOGO */
+    border-radius: 20px; 
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+}
+
+header nav ul li a {
+    color: var(--color-accent-text);
+    text-decoration: none;
+    padding: 10px 15px;
+    transition: color 0.3s;
+}
+
+header nav ul li a:hover, header nav ul li a.active {
+    color: white; 
+}
+
+/* Search Box */
+.search-box {
+    display: flex;
+    align-items: center;
+    background-color: var(--color-search-input); 
+    padding: 0; 
+    overflow: hidden; 
+    /* PERBAIKAN SUDUT SEARCH BAR */
+    border-radius: 20px; 
+}
+
+.search-box input {
+    /* WARNA INPUT SEARCH BAR */
+    background: var(--color-accent-text);
+    border: none;
+    color: var(--color-background-header); 
+    padding: 8px 10px;
+    outline: none;
+    width: 180px;
+    /* Sudut kiri melengkung agar menyatu dengan border-radius parent */
+    border-radius: 20px 0 0 20px; 
+}
+
+.search-box input::placeholder {
+    color: #5d5d5d;
+}
+
+.search-box .fa-search {
+    background-color: var(--color-search-button);
+    color: white;
+    padding: 8px 12px;
+    cursor: pointer;
+    /* Sudut kanan melengkung agar menyatu dengan border-radius parent */
+    border-radius: 0 20px 20px 0; 
+}
+
+
+/* Hero Section (Tidak ada perubahan signifikan di sini) */
+#hero-banner {
+    background: url('../images/croods-bg.png') no-repeat center center/cover;
+    height: 600px; 
+    position: relative;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4); 
+}
+
+.hero-content {
+    position: relative;
+    z-index: 50;
+    padding-top: 250px; 
+    color: white;
+}
+
+.film-title {
+    font-size: 2.8em; 
+    font-weight: 800;
+    line-height: 1.1; 
+    margin-bottom: 5px;
+    color: var(--color-accent-text); 
+}
+
+.genre {
+    font-size: 1.2em;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.book-btn {
+    background-color: var(--color-book-now-bg); 
+    border: 2px solid var(--color-accent-text);
+    color: var(--color-accent-text);
+    padding: 8px 20px;
+    text-decoration: none;
+    font-weight: 500;
+    border-radius: 3px;
+    transition: background-color 0.3s;
+}
+
+.book-btn:hover {
+    background-color: rgba(25, 34, 38, 0.7);
+}
+
+
+/* Now Showing Section dan Promos Section */
+#now-showing, #promos {
+    padding: 40px 0 80px 0; 
+}
+
+#now-showing {
+    background-color: var(--color-background-main);
+}
+
+#promos {
+    background-color: var(--color-background-main);
+}
+
+.movie-list, .promo-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.movie-item {
+    width: 18%; 
+    max-width: 180px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+.movie-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.promo-item {
+    width: 30%;
+    max-width: 350px;
+    overflow: hidden;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.promo-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+/* Footer */
+footer {
+    background-color: var(--color-background-footer); 
+    text-align: left; 
+    padding: 20px 0;
+    font-size: 0.8em;
+    /* PERBAIKAN WARNA TEKS FOOTER */
+    color: var(--color-accent-text); /* Menggunakan warna aksen agar terlihat */
+}
+
+footer .container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/* Media Queries untuk Responsif Dasar */
+@media (max-width: 768px) {
+    .nav-bar {
+        flex-direction: column;
+    }
+    header nav ul {
+        padding: 10px 0;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .search-box {
+        margin-bottom: 10px;
+    }
+    .movie-list, .promo-list {
+        flex-direction: column;
+        align-items: center;
+    }
+    .movie-item, .promo-item {
+        width: 60%; 
+        margin-bottom: 20px;
+    }
+    .hero-content {
+        padding-top: 150px;
+    }
+    .film-title {
+        font-size: 2em;
+    }
+}
