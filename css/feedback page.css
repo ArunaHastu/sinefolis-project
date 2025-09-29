@@ -1,24 +1,18 @@
-/* Gaya khusus Halaman Feedback */
-
-/* Atur background khusus untuk halaman ini */
 body {
     background: url('../images/feedback-bg.png') no-repeat center center/cover;
     background-attachment: fixed; 
 }
 
-/* Container utama untuk memusatkan kotak feedback */
 #feedback-content {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 80vh; /* Agar kotak berada di tengah vertikal */
+    min-height: 80vh;
     padding-top: 50px;
     padding-bottom: 50px;
 }
 
-/* Kotak Formulir Utama (Sesuai Desain Figma) */
 .feedback-box {
-    /* Meniru warna dan bentuk kotak di Cinemas Page */
     background: linear-gradient(180deg, 
         #232A2C 0%, 
         #4C5B5F 25%, 
@@ -33,10 +27,9 @@ body {
     text-align: center;
 }
 
-/* Judul Feedback */
 .page-title {
     font-family: 'Times New Roman', Times, serif; 
-    color: var(--color-accent-text); /* Warna Kekuningan */
+    color: var(--color-accent-text); 
     text-align: center;
     font-size: 3.5em; 
     font-weight: 400; 
@@ -44,14 +37,13 @@ body {
     margin-bottom: 30px; 
 }
 
-/* Styling Formulir */
 .feedback-form {
     text-align: left;
 }
 
 .feedback-form label {
     display: block;
-    color: var(--color-text-light); /* Teks label putih */
+    color: var(--color-text-light);
     font-size: 1.2em;
     margin-top: 15px;
     margin-bottom: 5px;
@@ -61,7 +53,6 @@ body {
 .feedback-form input[type="email"],
 .feedback-form textarea {
     width: 100%;
-    /* WARNA INPUT SAMA DENGAN WARNA KARTU DI CINEMAS */
     background-color: #748B92; 
     color: var(--color-background-header);
     border: none;
@@ -73,20 +64,18 @@ body {
 }
 
 .feedback-form textarea {
-    height: 150px; /* Tinggi yang lebih besar untuk komentar */
+    height: 150px; 
 }
 
 
-/* Styling Tombol Submit */
 .submit-btn {
-    /* Menggunakan gaya tombol Book Now atau Redeem yang gelap */
     background-color: var(--color-book-now-bg); 
     border: 2px solid var(--color-accent-text);
     color: var(--color-accent-text);
     padding: 10px 30px;
     font-size: 1.1em;
     font-weight: 500;
-    border-radius: 50px; /* Bentuk kapsul */
+    border-radius: 50px; 
     cursor: pointer;
     transition: background-color 0.3s;
     margin-top: 30px;
@@ -100,7 +89,6 @@ body {
     background-color: #2c3e50;
 }
 
-/* Responsif Sederhana */
 @media (max-width: 600px) {
     .feedback-box {
         padding: 30px 20px;
